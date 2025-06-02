@@ -70,6 +70,13 @@ ease of use and embeddability in other libraries.
 
 The resulting JAR will be found in the `build/libs/` directory.
 
+Optionally, you can publish (“install”) your new build
+into your local Maven repository (`~/.m2/repository`).
+That way, you easily can consume your own build of the library
+from other locally-built Maven/Gradle projects.
+
+    $ ./gradlew publishToMavenLocal
+
 # Building the native libraries
 
 The native libraries are written in C,
@@ -114,6 +121,12 @@ to the path of your Java installation directory.
     $ make ppc
 
     # Build 64-bit x86 macOS binaries. This requires a macOS build host.
+    $ make osxintel
+    # Build AArch64 (“Apple Silicon”) macOS binaries. This requires a macOS
+    # build host and Xcode 12.2+.
+    $ make osxarm64
+    # Build a macOS universal binary containing Intel and AArch64 builds of the
+    # library. This requires a macOS build host.
     $ make osx
 
     # Build 32- and 64-bit x86 FreeBSD binaries, or just for 32/64-bit,
@@ -200,4 +213,3 @@ Support this project with your organization. Your logo will show up here with a 
 <a href="https://opencollective.com/nrjavaserial/organization/7/website"><img src="https://opencollective.com/nrjavaserial/organization/7/avatar.svg"></a>
 <a href="https://opencollective.com/nrjavaserial/organization/8/website"><img src="https://opencollective.com/nrjavaserial/organization/8/avatar.svg"></a>
 <a href="https://opencollective.com/nrjavaserial/organization/9/website"><img src="https://opencollective.com/nrjavaserial/organization/9/avatar.svg"></a>
-
